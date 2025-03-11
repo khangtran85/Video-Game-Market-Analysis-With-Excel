@@ -20,6 +20,8 @@ To address these limitations, the dataset was restructured by adding a new "Regi
 # Processing
 After completing the steps in the previous section, we obtain the following table:
 
+![vgsales_table.png](https://github.com/khangtran85/Video-Game-Market-Analysis-With-Excel/blob/main/vgsales_table.png)
+
 One key point to note is that the original data used to create the dashboard must be in table format. This ensures easier updates and enhances automation.
 
 The next steps involve creating PivotCharts by first generating PivotTables. Each PivotTable serves as an answer to a specific analytical objective. The creation of PivotCharts is also a way to automate the dashboard.
@@ -99,6 +101,28 @@ For example, the **Top5GenresWithHighestSales** table is not linked to the **Gen
 Next, one of the most critical slicers is the **Time Slicer (Timeline)**, as time-based analysis is the primary objective of this dashboard.
 
 ![Slicer.png](https://github.com/khangtran85/Video-Game-Market-Analysis-With-Excel/blob/main/Slicer.png)
+
+---
+## Important Consideration  
+
+Unlike **Power BI**, **Excel** does not have a fixed Dashboard layout, as it lacks space constraints. This means that the **Dashboard screen** can be accidentally shifted or lost due to the **Row Scroll** and **Column Scroll** bars. Additionally, the ability to **zoom in and out** can further impact the Dashboard’s appearance, potentially leading to inconsistencies in future views.
+
+To address this issue, a viable solution is to implement a **VBA script** that automatically resets the **Zoom level** and **Scroll position** whenever the **Dashboard worksheet** is activated. This ensures that every time the Dashboard is accessed, it retains its intended layout, preventing unintended distortions caused by previous adjustments. This approach not only enhances user experience but also maintains the integrity of the Dashboard’s design across multiple viewing sessions.
+
+```vba
+Private Sub Worksheet_Activate()
+
+    Application.ScreenUpdating = False
+    
+    ActiveWindow.Zoom = 67
+    ActiveWindow.ScrollColumn = 1
+    ActiveWindow.ScrollRow = 1
+    Range("A1").Select
+    
+    Application.ScreenUpdating = True
+
+End Sub
+```
 
 ## Final Outcome  
 After implementing these steps, the completed dashboard will provide an automated, interactive, and insightful analysis of the video game industry's development over time.
