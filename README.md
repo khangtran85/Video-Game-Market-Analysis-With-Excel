@@ -1,5 +1,5 @@
 # Video-Game-Market-Analysis-With-Excel
-An in-depth analysis of the video game market (1980–2020) using Excel, exploring sales trends and forecasting future performance. This project provides insights into factors driving game sales, helping developers and publishers refine their strategies for game development and marketing across different regions.
+An in-depth analysis of the video game market (1980 – 2020) using Excel, exploring sales trends and forecasting future performance. This project provides insights into factors driving game sales, helping developers and publishers refine their strategies for game development and marketing across different regions.
 # Introduction
 The video game industry is a thriving global market with immense potential for developers and publishers. As gaming continues to evolve across diverse platforms and audiences, understanding market trends and sales dynamics is essential for success.
 
