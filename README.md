@@ -18,4 +18,5 @@ Conducting the analysis in Excel presents several challenges. Unlike Power BI, S
 
 To address these limitations, the dataset was restructured by adding a new "Region" column, consolidating regional sales values. This adjustment allows for more flexible analysis, enabling new visualizations and insights. However, it also increases the number of rows fourfold, which may impact Excel’s performance when handling large datasets.
 # Processing
+
 # Recommendation
